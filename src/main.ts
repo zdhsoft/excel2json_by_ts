@@ -15,7 +15,6 @@ import fs from 'fs';
 import path from 'path';
 import { XExcelUtils } from './excel_utils';
 
-const t = './testdata/Build.json';
 import { getLogger, XCommonRet, utils } from 'xmcommon';
 import { CommonReg, EnumDataBaseType, EnumDataType, EnumOutType, XTypeUtils } from './constant';
 const log = getLogger(__filename);
@@ -699,6 +698,15 @@ function fileList(paramPath: string): string[] {
         }
         ext = ext.toLowerCase();
         if (!(ext === '.xlsx' || ext === '.xls')) {
+            return false;
+        }
+
+        const basename = path.basename(item);
+        if (!utils.isString(basename)) {
+            return false;
+        }
+
+        if (basename.startsWith('~$')) {
             return false;
         }
         const fullName = path.join(paramPath, item);

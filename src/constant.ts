@@ -1,35 +1,57 @@
 import { utils } from 'xmcommon';
-
+/** 配置输出类型 */
 export enum EnumOutType {
+    /** 客户端配置 */
     CLIENT = 'c',
+    /** 服务端配置 */
     SERVER = 's',
 }
-
+/** json基本数据类型 */
 export enum EnumDataBaseType {
+    /** 未知类型 */
     UNKNOWN = 0,
+    /** boolean */
     BOOL = 1,
+    /** 整数 */
     INT = 2,
+    /** 数字 */
     NUMBER = 3,
+    /** 字符串 */
     STRING = 4,
+    /** 对象 */
     OBJECT = 5,
+    /** 任意类型 */
     ANY = 6,
 }
+/** 配置数据的类型定义 */
 export enum EnumDataType {
+    /** 任意类型 */
     ANY = 'any',
+    /** boolean */
     BOOL = 'bool',
+    /** 整数 */
     INT = 'int',
+    /** 数字 */
     NUMBER = 'number',
+    /** 字符串 */
     STRING = 'string',
+    /** 对象 */
     OBJECT = 'object',
 
+    /** 任意类型数组 */
     ARRAY_ANY = 'array:any',
+    /** boolean数组 */
     ARRAY_BOOL = 'array:bool',
+    /** 整数数组 */
     ARRAY_INT = 'array:int',
+    /** 数字数组 */
     ARRAY_NUMBER = 'array:number',
+    /** 字符串数组 */
     ARRAY_STRING = 'array:string',
+    /** 对象数组 */
     ARRAY_OBJECT = 'array:object',
 }
-
+/** 配置类型集合 */
 const TypeSet = {
     SetTypeAny: new Set<EnumDataType>(),
     SetTypeBool: new Set<EnumDataType>(),
@@ -39,7 +61,7 @@ const TypeSet = {
     SetTypeObject: new Set<EnumDataType>(),
     SetTypeArray: new Set<EnumDataType>(),
 };
-
+// 初始化配置类型集合
 TypeSet.SetTypeAny.add(EnumDataType.ANY).add(EnumDataType.ARRAY_ANY);
 TypeSet.SetTypeBool.add(EnumDataType.BOOL).add(EnumDataType.ARRAY_BOOL);
 TypeSet.SetTypeInt.add(EnumDataType.INT).add(EnumDataType.ARRAY_INT);
@@ -53,35 +75,43 @@ TypeSet.SetTypeArray.add(EnumDataType.ARRAY_ANY)
     .add(EnumDataType.ARRAY_STRING)
     .add(EnumDataType.ARRAY_OBJECT);
 
+/** 配置类型工具 */
 export class XTypeUtils {
+    /** 检查是否是任意类型 */
     public static isAny(paramType: EnumDataType) {
         return TypeSet.SetTypeAny.has(paramType);
     }
 
+    /** 检查是否是boolean类型 */
     public static isBool(paramType: EnumDataType) {
         return TypeSet.SetTypeBool.has(paramType);
     }
 
+    /** 检查是否是整数类型 */
     public static isInt(paramType: EnumDataType) {
         return TypeSet.SetTypeInt.has(paramType);
     }
 
+    /** 检查是否是数字类型 */
     public static isNumber(paramType: EnumDataType) {
         return TypeSet.SetTypeNumber.has(paramType);
     }
 
+    /** 检查是否是字符串类型 */
     public static isString(paramType: EnumDataType) {
         return TypeSet.SetTypeString.has(paramType);
     }
 
+    /** 检查是否是对象类型 */
     public static isObject(paramType: EnumDataType) {
         return TypeSet.SetTypeObject.has(paramType);
     }
 
+    /** 检查是否是数组类型 */
     public static isArray(paramType: EnumDataType) {
         return TypeSet.SetTypeArray.has(paramType);
     }
-
+    /** 检查数据类型与基础类型是否匹配 */
     public static checkType(paramType: EnumDataBaseType, paramData: any) {
         switch (paramType) {
             case EnumDataBaseType.BOOL:
@@ -100,7 +130,7 @@ export class XTypeUtils {
                 return false;
         }
     }
-
+    /** 根据配置类型，取基础类型 */
     public static baseType(paramType: EnumDataType): EnumDataBaseType {
         if (this.isAny(paramType)) {
             return EnumDataBaseType.ANY;

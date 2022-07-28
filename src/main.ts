@@ -15,7 +15,6 @@ import fs from 'fs';
 import path from 'path';
 import { XExcelUtils } from './excel_utils';
 
-const xlsxfile = './testdata/Build.xlsx';
 const t = './testdata/Build.json';
 import { getLogger, XCommonRet, utils } from 'xmcommon';
 import { CommonReg, EnumDataBaseType, EnumDataType, EnumOutType, XTypeUtils } from './constant';
@@ -506,14 +505,15 @@ class XTableInfo {
 
                 const newData: any = {};
 
-                for (const key in o) {
-                    const getResult = this.titleInfo.getColumnByKey(key);
-                    if (getResult.isNotOK) {
-                        r.assignFrom(getResult);
-                        r.addErrorPre(`未找到sheet:${this.sheetName},key:${key}的定义信息>`);
-                        continue;
-                    }
-                    const column = getResult.data as XColumnInfo;
+                for (const column of this.titleInfo.columns) {
+                    const key = column.key;
+                    // const getResult = this.titleInfo.getColumnByKey(key);
+                    // if (getResult.isNotOK) {
+                    //     r.assignFrom(getResult);
+                    //     r.addErrorPre(`未找到sheet:${this.sheetName},key:${key}的定义信息>`);
+                    //     continue;
+                    // }
+                    // const column = col;
                     if (!this.isOut(column.outType)) {
                         continue;
                     }
@@ -719,7 +719,7 @@ function doExcel(paramFileName: string, paramFullName: string) {
                 return;
             }
             const excelData: any = result.data;
-            fs.writeFileSync(t, JSON.stringify(excelData, null, 2), 'utf-8');
+            fs.writeFileSync(paramFullName + '.json', JSON.stringify(excelData, null, 2), 'utf-8');
             // 初始化
             const initResult = initTable(excelData[tablelist], excelData);
             if (initResult.isNotOK) {

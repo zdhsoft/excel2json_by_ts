@@ -30,3 +30,4 @@ lerna-debug.log*
 build_file
 testdata
 cfg
+backup

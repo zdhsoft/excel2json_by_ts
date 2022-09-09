@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-node",
+            "type": "node",
             "request": "launch",
             "name": "编译直接运行",
             "console": "integratedTerminal",
@@ -20,7 +20,7 @@
             ]
         },
         {
-            "type": "pwa-node",
+            "type": "node",
             "request": "launch",
             "name": "不编译直接运行",
             "console": "integratedTerminal",
@@ -34,7 +34,7 @@
             ]
         },
         {
-            "type": "pwa-node",
+            "type": "node",
             "request": "launch",
             "name": "格式化并编译直接运行",
             "console": "integratedTerminal",

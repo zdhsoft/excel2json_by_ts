@@ -627,6 +627,11 @@ class XTableInfo {
                                     value = true;
                                 }
                             }
+                        } else if (type === EnumDataBaseType.OBJECT) {
+                            value = utils.JsonParse(value);
+                            if (utils.isNull(value)) {
+                                value = {};
+                            }
                         }
                         if (!XTypeUtils.checkType(type, value)) {
                             r.setError(-54, `第${row}行:${key}=${value}不是指定的类型！`);

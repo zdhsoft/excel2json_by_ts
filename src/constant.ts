@@ -123,7 +123,7 @@ export class XTypeUtils {
             case EnumDataBaseType.NUMBER:
                 return utils.isNumber(paramData);
             case EnumDataBaseType.OBJECT:
-                return utils.isObject(paramData);
+                return utils.isNotNull(paramData);
             case EnumDataBaseType.ANY:
                 return true;
             default:

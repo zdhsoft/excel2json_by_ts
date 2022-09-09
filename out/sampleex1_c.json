@@ -1,0 +1,9 @@
+{
+    "describe": "样例表-客户端",
+    "sheetName": "sample",
+    "list":[
+        {"id":20001,"name":"name1👌","is_student":true,"tips":"提示1"},
+        {"id":20002,"name":"name2","is_student":false,"tips":"提示2"},
+        {"id":20003,"name":"name3","is_student":true,"tips":"提示3"}
+    ]
+}

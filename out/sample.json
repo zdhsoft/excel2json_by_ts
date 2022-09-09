@@ -1,0 +1,9 @@
+{
+    "describe": "样例表-服务端",
+    "sheetName": "样例表",
+    "list":[
+        {"id":10001,"name":"字符串名称1","is_student":true,"amount":98.99,"code_list":[1,2,3,4,5],"labels":["工程类","weman"],"ext":{"a":100,"b":"this is b"}},
+        {"id":10002,"name":"字符串名称2","is_student":false,"amount":12345.01,"code_list":[6,7,8,9,10],"labels":["工程类","男"],"ext":{}},
+        {"id":10003,"name":"字符串名称3","is_student":true,"amount":33,"code_list":[11,12],"labels":["人类","女"],"ext":{}}
+    ]
+}

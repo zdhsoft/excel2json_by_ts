@@ -14,7 +14,7 @@
             ],
             "preLaunchTask": "npmBuild",
             "program": "${workspaceFolder}\\dist\\main.js",
-            "args": ["--dir", "testdata"],
+            "args": ["--dir", "test"],
             "outFiles": [
                 "${workspaceFolder}/dist/**/*.js"
             ]
@@ -27,7 +27,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "args": ["--dir", "testdata"],
+            "args": ["--dir", "test"],
             "program": "${workspaceFolder}\\dist\\main.js",
             "outFiles": [
                 "${workspaceFolder}/dist/**/*.js"
@@ -42,7 +42,7 @@
                 "<node_internals>/**"
             ],
             "preLaunchTask": "格式化代码并编译",
-            "args": ["--dir", "testdata"],
+            "args": ["--dir", "test"],
             "program": "${workspaceFolder}\\dist\\main.js",
             "outFiles": [
                 "${workspaceFolder}/dist/**/*.js"

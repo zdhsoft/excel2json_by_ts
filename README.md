@@ -10,7 +10,7 @@
 |test/sample.xlsx|是测试的配置excel例子|
 |out|目录是生成后的目录|
 |test.bat|是生成脚本。|
-|excel2json.exe|是用pkg生成的, 具体参考：https://zdhsoft.blog.csdn.net/article/details/124490289|
+|excel2json.exe|是用pkg生成的, 可以直接使用。具体参考：https://zdhsoft.blog.csdn.net/article/details/124490289|
 - 生成的例子1
 ```json
 {

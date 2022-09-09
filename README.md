@@ -1,7 +1,10 @@
 # excel2json_by_ts
 - 基于typescript的实现的excel2json工具
+- 这个项目的目录：https://github.com/zdhsoft/excel2json_by_ts  
+
 - 2010年的时候，我用python写了一个, 用了好些年。https://github.com/zdhsoft/excel2json 
-- 2022年用typescript重写了一下，简化很多 https://github.com/zdhsoft/excel2json_by_ts  
+- 2022年用typescript重写了一下，简化很多 https://github.com/zdhsoft/excel2json_by_ts
+- 写的很匆忙，代码有点乱，注释比较少
 
 ## 示例说明 
 - 文件说明

@@ -32,3 +32,5 @@ testdata
 cfg
 backup
 file_type_curr.xlsx
+.vscode/settings.json
+test/sample.xlsx.json

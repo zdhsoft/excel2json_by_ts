@@ -36,6 +36,7 @@
     },
     "dependencies": {
         "xlsx": "^0.18.5",
-        "xmcommon": "^1.0.8"
+        "xmcommon": "^1.0.9",
+        "yargs": "^17.5.1"
     }
 }

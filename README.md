@@ -1,11 +1,18 @@
 # excel2json_by_ts
+- readme更新中,未完成
 - 基于typescript的实现的excel2json工具
 - 这个项目的目录：https://github.com/zdhsoft/excel2json_by_ts  
 
-- 2010年的时候，我用python写了一个, 用了好些年。https://github.com/zdhsoft/excel2json 
+- 2010年的时候，我用python写了一个, 用了好些年。https://github.com/zdhsoft/excel2json 已经放弃了，现在全面使用这个版本了
 - 2022年用typescript重写了一下，简化很多 https://github.com/zdhsoft/excel2json_by_ts
 - 写的很匆忙，代码有点乱，注释比较少
 
+## 使用说明
+- 这个版本，会遍历指定目录下的所有excel文件
+### 程序参数
+```
+excel2json --dir <存放配置的目录>
+```
 ## 示例说明 
 - 文件说明
 

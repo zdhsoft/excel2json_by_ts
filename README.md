@@ -1,5 +1,5 @@
 # excel2json_by_ts
-- readme更新中,未完成
+- readme更新中,未完成，准备集成yargs实现命令行功能。
 - 基于typescript的实现的excel2json工具
 - 这个项目的目录：https://github.com/zdhsoft/excel2json_by_ts  
 
